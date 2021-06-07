@@ -24,4 +24,4 @@ js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
 fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
-$('body').append('<div class="wapakels"></div>');
+$('main').append('<div class="wapakels"></div>');

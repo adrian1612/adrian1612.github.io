@@ -4,7 +4,7 @@ $('.datepicker').each(function(){
 	});
 });
 
-
+$('nav').append('<div id="fb-root"></div><div id="fb-customer-chat" class="fb-customerchat"></div>');
 
 var chatbox = document.getElementById('fb-customer-chat');
 chatbox.setAttribute("page_id", "284326739086273");
@@ -24,4 +24,4 @@ js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
 fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
-$('nav').append('<div id="fb-root"></div><div id="fb-customer-chat" class="fb-customerchat"></div>');
+

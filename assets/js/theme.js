@@ -4,6 +4,8 @@ $('.datepicker').each(function(){
 	});
 });
 
+$('.btn-outline-primary').addClass('btn-outline-dark');
+
 $('nav').append('<div id="fb-root"></div><div id="fb-customer-chat" class="fb-customerchat"></div>');
 
 var chatbox = document.getElementById('fb-customer-chat');

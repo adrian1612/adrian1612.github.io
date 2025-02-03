@@ -1,8 +1,13 @@
 class Info {
     constructor() {
         this.fullname = 'Adrian Aranilla Jaspio';
-        this.bday = 'July 5, 1994';
+        this.bday = '5 July 1994';
         this.age = ko.observable(moment().diff(this.bday, 'year'));
+        this.Contact = '0977-697-3009';
+        this.Address = '660 Purok 3, Bucal, Calamba City, Laguna 4027';
+        this.Degree = 'Bachelor of Science In Information System';
+        this.Email = 'adrianjaspio@gmail.com';
+        
         this.education = [{
             Degree: 'Bachelor of Science in Information System',
             School: 'Calayan Educational Foundation Inc.',

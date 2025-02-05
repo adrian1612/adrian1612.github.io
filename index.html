@@ -60,8 +60,10 @@
       <ul>
         <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
         <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-        <li><a href="#skills"><i class="bi bi-person navicon"></i> Skills</a></li>
+        <li><a href="#skills"><i class="bi bi-list navicon"></i> Skills</a></li>
         <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+        <li><a href="#project"><i class="bi bi-globe2 navicon"></i> Projects</a></li>
+        <li><a href="#publish"><i class="bi bi-box-fill navicon"></i> Nuget Published</a></li>
         <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
       </ul>
     </nav>
@@ -159,6 +161,8 @@
 
     </section><!-- /Skills Section -->
 
+   
+
     <!-- Resume Section -->
     <section id="resume" class="resume section">
 
@@ -219,6 +223,73 @@
 
     </section><!-- /Resume Section -->
 
+    <section id="project">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+       <h2>Projects</h2>
+     </div><!-- End Section Title -->
+     <div class="container">
+       <div class="row g-5">
+         <!--ko foreach: Info.Projects-->
+         <div class="col-md-6">
+          <h5 class="text-decoration-underline"><span data-bind="text: Title"></span></h5>
+          <p data-bind="text: Description"></p>
+          <div data-bind="attr: { id: 'caro_' + $index() }" class="carousel carousel-dark slide">
+            <div class="carousel-indicators">
+              <!--ko foreach: Imgs-->
+              <button type="button" data-bind="attr: { 'data-bs-target': '#caro_' + $parentContext.$index(), 'data-bs-slide-to': $index() }, css: { active: $index() == 0 }"></button>
+              <!--/ko-->
+            </div>
+            <div class="carousel-inner">
+              <!--ko foreach: Imgs-->
+              <div data-bind="css: { active: $index() == 0 }" class="carousel-item" data-bs-interval="1000">
+                <img data-bind="attr: { src: src}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5><span data-bind="text: title"></span></h5>
+                </div>
+              </div>
+              <!--/ko-->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bind="attr: { 'data-bs-target': '#caro_' + $index() }" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bind="attr: { 'data-bs-target': '#caro_' + $index() }" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+         </div>
+         <!--/ko-->
+       </div>
+     </div>
+   </section>
+
+
+    <section id="publish">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+       <h2>Nuget Published</h2>
+     </div><!-- End Section Title -->
+     <div class="container">
+       <div class="row g-2">
+         <!--ko foreach: Info.nugetPublished-->
+         <div class="col-md-3">
+           <div style="border: 1px solid #ddd; padding: 10px; width: 300px; text-align: center;">
+             <img data-bind="attr: { src: Icon }" alt="NuGet Logo" width="100">
+             <h3><span data-bind="text:Title"></span></h3>
+             <p>Latest Version: <strong data-bind="text: Version"></strong></p>
+             <a data-bind="attr: { href: Link }" target="_blank" style="text-decoration: none; color: white;">
+                 <button style="background-color: #004880; color: white; padding: 10px 15px; border: none; cursor: pointer;">
+                     View on NuGet
+                 </button>
+             </a>
+         </div>
+         </div>
+         <!--/ko-->
+       </div>
+     </div>
+   </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
@@ -269,6 +340,7 @@
 
     </section><!-- /Contact Section -->
 
+   
   </main>
 
   <footer id="footer" class="footer position-relative light-background">

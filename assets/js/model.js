@@ -7,7 +7,7 @@ class Info {
         this.Address = '660 Purok 3, Bucal, Calamba City, Laguna 4027';
         this.Degree = 'Bachelor of Science In Information System';
         this.Email = 'adrianjaspio@gmail.com';
-        
+
         this.education = [{
             Degree: 'Bachelor of Science in Information System',
             School: 'Calayan Educational Foundation Inc.',
@@ -28,9 +28,21 @@ class Info {
         }];
         this.workExperience = [{
             Company: 'MAYO HOLDINGS AND CONSTRUCTION (MHC), INC.',
-            Description: 'Update and expand existing programs. Debug programs by testing for and fixing errors-Identify user needs to create and administer databases. Backup and restore data to prevent data loss. Ensure that the database operates efficiently and without error. Make and test modifications to the database structure when needed.',
+            Description: 'As an MIS Supervisor, I oversee the company’s Management Information Systems, ensuring smooth operations, data security, and system efficiency. My role includes managing IT infrastructure, optimizing database structures, and supervising a team of programmers and IT specialists. I contribute to strategic planning, implement technological improvements, and ensure that our systems align with business objectives.',
+            Position: 'MIS Supervisor',
+            Duration: 'Jul 2024 - Present',
+            Address: 'KM 94 Brgy Milagrosa Calamba city, Laguna'
+        }, {
+            Company: 'MAYO HOLDINGS AND CONSTRUCTION (MHC), INC.',
+            Description: 'After being promoted to Senior Programmer, I took on greater responsibilities in system architecture, code optimization, and mentoring junior developers. I played a key role in designing and implementing complex features, improving development workflows, and ensuring code quality. My expertise in C# ASP.NET MVC allowed me to enhance application performance and security while leading crucial development projects.',
+            Position: 'Senior Programmer',
+            Duration: 'September 2023',
+            Address: 'KM 94 Brgy Milagrosa Calamba city, Laguna'
+        }, {
+            Company: 'MAYO HOLDINGS AND CONSTRUCTION (MHC), INC.',
+            Description: 'As a Fullstack Programmer, I was responsible for developing and maintaining web applications using C# ASP.NET MVC. I handled both frontend and backend development, ensuring seamless integration between user interfaces and databases. My role involved troubleshooting issues, optimizing code performance, and collaborating with other teams to deliver efficient software solutions.',
             Position: 'Fullstack Programmer',
-            Duration: '2021 - Present',
+            Duration: 'April 2021',
             Address: 'KM 94 Brgy Milagrosa Calamba city, Laguna'
         }, {
             Company: 'Royal Star Appliance Marketing Inc.',
@@ -76,6 +88,56 @@ class Info {
             Name: 'Javascript',
             Value: 94
         }];
+        this.nugetPublished = [{
+            Title: 'AAJControl',
+            Link: 'https://www.nuget.org/packages/AAJControl',
+            Icon: 'https://api.nuget.org/v3-flatcontainer/aajcontrol/1.0.26/icon',
+            Version: '1.0.26'
+        },
+        ];
+        this.Projects = [{
+            Title: 'Program Management System',
+            Description: 'Portal thru other applications to manage the company’s projects, employees, and clients. It includes a dashboard, project management, employee management, client management, and a reporting system.',
+            Imgs: [
+                { title: 'Profile', src: 'assets/img/Projects/PMS/Profile.png' },
+                { title: 'Dashboard', src: 'assets/img/Projects/PMS/Dashboard.png' },
+                { title: 'Login', src: 'assets/img/Projects/PMS/Login.png' },
+            ]
+        }, {
+            Title: 'HR Management System',
+            Description: 'HR Management System is a web-based application that helps companies manage their human resources more efficiently. It includes dynamic company structure, employee management, Holiday, separation, and a reporting system.',
+            Imgs: [
+                { title: 'Dashboard', src: 'assets/img/Projects/HRMS/Dashboard.png' },
+                { title: 'Login', src: 'assets/img/Projects/HRMS/Employees.png' },
+            ]
+        }, {
+            Title: 'Gatepass Management System',
+            Description: 'Gatepass Management System is a web-based application that helps companies monitor and tract their assets.',
+            Imgs: [
+                { title: 'Dashboard', src: 'assets/img/Projects/Gatepass/Dashboard.png' },
+                { title: 'Login', src: 'assets/img/Projects/Gatepass/ForApproval.png' },
+            ]
+        },{
+            Title: 'Accounting System',
+            Description: 'Accounting System is a web-based application that helps companies manage their accounting more efficiently.',
+            Imgs: [
+                { title: 'Login', src: 'assets/img/Projects/AccountingSystem/Journal.png' },
+                { title: 'Dashboard', src: 'assets/img/Projects/AccountingSystem/ChartOfAccount.png' },
+            ]
+        },{
+            Title: 'Attendance System',
+            Description: 'Timekeeping System is a web-based application that helps companies keep track of their employees attendance.',
+            Imgs: [
+                { title: 'Login', src: 'assets/img/Projects/Attendance/PerEmployee.png' },
+                { title: 'Dashboard', src: 'assets/img/Projects/Attendance/Dashboard.png' },
+            ]
+        },{
+            Title: 'Purchasing',
+            Description: 'Purchasing System is a web-based application that helps companies manage their purchasing more efficiently.',
+            Imgs: [
+                { title: 'Dashboard', src: 'assets/img/Projects/Purchasing/Supplier.png' },
+            ]
+        },]
     }
 }
 

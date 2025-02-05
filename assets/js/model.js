@@ -108,34 +108,34 @@ class Info {
             Description: 'HR Management System is a web-based application that helps companies manage their human resources more efficiently. It includes dynamic company structure, employee management, Holiday, separation, and a reporting system.',
             Imgs: [
                 { title: 'Dashboard', src: 'assets/img/Projects/HRMS/Dashboard.png' },
-                { title: 'Login', src: 'assets/img/Projects/HRMS/Employees.png' },
+                { title: 'Employees', src: 'assets/img/Projects/HRMS/Employees.png' },
             ]
         }, {
             Title: 'Gatepass Management System',
             Description: 'Gatepass Management System is a web-based application that helps companies monitor and tract their assets.',
             Imgs: [
                 { title: 'Dashboard', src: 'assets/img/Projects/Gatepass/Dashboard.png' },
-                { title: 'Login', src: 'assets/img/Projects/Gatepass/ForApproval.png' },
+                { title: 'For Appoval', src: 'assets/img/Projects/Gatepass/ForApproval.png' },
             ]
         },{
             Title: 'Accounting System',
             Description: 'Accounting System is a web-based application that helps companies manage their accounting more efficiently.',
             Imgs: [
-                { title: 'Login', src: 'assets/img/Projects/AccountingSystem/Journal.png' },
-                { title: 'Dashboard', src: 'assets/img/Projects/AccountingSystem/ChartOfAccount.png' },
+                { title: 'Journal', src: 'assets/img/Projects/AccountingSystem/Journal.png' },
+                { title: 'Chart of Account', src: 'assets/img/Projects/AccountingSystem/ChartOfAccount.png' },
             ]
         },{
             Title: 'Attendance System',
             Description: 'Timekeeping System is a web-based application that helps companies keep track of their employees attendance.',
             Imgs: [
-                { title: 'Login', src: 'assets/img/Projects/Attendance/PerEmployee.png' },
+                { title: 'Employee', src: 'assets/img/Projects/Attendance/PerEmployee.png' },
                 { title: 'Dashboard', src: 'assets/img/Projects/Attendance/Dashboard.png' },
             ]
         },{
             Title: 'Purchasing',
             Description: 'Purchasing System is a web-based application that helps companies manage their purchasing more efficiently.',
             Imgs: [
-                { title: 'Dashboard', src: 'assets/img/Projects/Purchasing/Supplier.png' },
+                { title: 'Supplier', src: 'assets/img/Projects/Purchasing/Supplier.png' },
             ]
         },]
     }

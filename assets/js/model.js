@@ -1,6 +1,6 @@
 class Info {
     constructor() {
-        this.fullname = 'Adrian Aranilla Jaspio';
+        this.fullname = 'Adrian A. Jaspio';
         this.bday = '5 July 1994';
         this.age = ko.observable(moment().diff(this.bday, 'year'));
         this.Contact = '0977-697-3009';

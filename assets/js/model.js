@@ -138,6 +138,11 @@ class Info {
                 { title: 'Supplier', src: 'assets/img/Projects/Purchasing/Supplier.png' },
             ]
         },]
+        this.gitRelease = [{
+            Title: 'SQL Server Backup Tool',
+            Description: `Backup all SQL Server databases to a specified folder. It can also restore the database from the backup file.`,
+            Link: 'https://github.com/adrian1612/SQLBak/releases/tag/sqlbak'
+        }]
     }
 }
 

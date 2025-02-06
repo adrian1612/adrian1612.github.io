@@ -64,6 +64,7 @@
         <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
         <li><a href="#project"><i class="bi bi-globe2 navicon"></i> Projects</a></li>
         <li><a href="#publish"><i class="bi bi-box-fill navicon"></i> Nuget Published</a></li>
+        <li><a href="#git"><i class="bi bi-github navicon"></i> Github Released</a></li>
         <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
       </ul>
     </nav>
@@ -290,6 +291,31 @@
        </div>
      </div>
    </section>
+
+   <section id="git">
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+     <h2>Github Released</h2>
+   </div><!-- End Section Title -->
+   <div class="container">
+     <div class="row g-2">
+       <!--ko foreach: Info.gitRelease-->
+       <div class="col-md-3">
+         <div style="border: 1px solid #ddd; padding: 10px; width: 300px; text-align: center;">
+           <i class="bi bi-github fs-1"></i>
+           <h6><span data-bind="text:Title"></span></h3>
+            <p data-bind="text: Description"></p>
+           <a data-bind="attr: { href: Link }" target="_blank" style="text-decoration: none; color: white;">
+               <button style="background-color: #004880; color: white; padding: 10px 15px; border: none; cursor: pointer;">
+                   View on Github
+               </button>
+           </a>
+       </div>
+       </div>
+       <!--/ko-->
+     </div>
+   </div>
+ </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">

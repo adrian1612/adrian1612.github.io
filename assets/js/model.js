@@ -7,7 +7,24 @@ class Info {
         this.Address = '660 Purok 3, Bucal, Calamba City, Laguna 4027';
         this.Degree = 'Bachelor of Science In Information System';
         this.Email = 'adrianjaspio@gmail.com';
-
+        this.website = { Name: 'adrian1612.github.io', Link: 'https://adrian1612.github.io' };
+        this.profile = 'assets/img/profile.jpg';
+        this.banner = 'assets/img/banner4.jpg';
+        this.AboutPicture = 'assets/img/CloseUpSide2.jpg';
+        this.social = [
+            { 
+                Name: 'facebook', 
+                Link: 'https://www.facebook.com/adrian.jaspio.7', 
+                Icon: 'bi bi-facebook',
+                Class: 'facebook'
+            }, 
+            { 
+                Name: 'linkedin', 
+                Link: 'https://www.linkedin.com/in/adrian-jaspio-a61923188/', 
+                Icon: 'bi bi-linkedin',
+                Class: 'linkedin'
+            }
+        ];
         this.education = [{
             Degree: 'Bachelor of Science in Information System',
             School: 'Calayan Educational Foundation Inc.',
@@ -142,7 +159,11 @@ class Info {
             Title: 'SQL Server Backup Tool',
             Description: `Backup all SQL Server databases to a specified folder. It can also restore the database from the backup file.`,
             Link: 'https://github.com/adrian1612/SQLBak/releases/tag/sqlbak'
-        }]
+        }];
+        this.randomInterval = function () {
+            var min = 1500, max = 5000;
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
     }
 }
 

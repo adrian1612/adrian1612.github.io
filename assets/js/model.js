@@ -23,7 +23,13 @@ class Info {
                 Link: 'https://www.linkedin.com/in/adrian-jaspio-a61923188/', 
                 Icon: 'bi bi-linkedin',
                 Class: 'linkedin'
-            }
+            },
+            { 
+                Name: 'youtube', 
+                Link: 'https://www.youtube.com/codetechnique',
+                Icon: 'bi bi-youtube',
+                Class: 'youtube'
+            },
         ];
         this.education = [{
             Degree: 'Bachelor of Science in Information System',

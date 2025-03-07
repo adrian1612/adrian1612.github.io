@@ -114,8 +114,8 @@ class Info {
         this.nugetPublished = [{
             Title: 'AAJControl',
             Link: 'https://www.nuget.org/packages/AAJControl',
-            Icon: 'https://api.nuget.org/v3-flatcontainer/aajcontrol/1.0.26/icon',
-            Version: '1.0.26'
+            Icon: 'https://api.nuget.org/v3-flatcontainer/aajcontrol/1.0.28/icon',
+            Version: '1.0.28'
         },
         ];
         this.Projects = [{

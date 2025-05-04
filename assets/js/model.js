@@ -50,10 +50,16 @@ class Info {
             Address: 'Lucena Heights Subdivision, Iba, Dupay, Lucena City, Quezon'
         }];
         this.workExperience = [{
+            Company: 'VERTERE GLOBAL SOLUTION',
+            Description: 'Responsible for designing, developing, maintaining, and analyzing complex software Systems. This role bridges the gap between business needs and technical solutions by working closely with stakeholders, mentoring junior developers, and ensuring software systems are scalable, secure, and maintainable.',
+            Position: 'Programmer/Analyst S3',
+            Duration: 'Apr 2025 - Present',
+            Address: 'MAKATI CITY'
+        },{
             Company: 'MAYO HOLDINGS AND CONSTRUCTION (MHC), INC.',
             Description: 'As an MIS Supervisor, I oversee the company’s Management Information Systems, ensuring smooth operations, data security, and system efficiency. My role includes managing IT infrastructure, optimizing database structures, and supervising a team of programmers and IT specialists. I contribute to strategic planning, implement technological improvements, and ensure that our systems align with business objectives.',
             Position: 'MIS Supervisor',
-            Duration: 'Jul 2024 - Present',
+            Duration: 'Jul 2024 - Mar 2025',
             Address: 'KM 94 Brgy Milagrosa Calamba city, Laguna'
         }, {
             Company: 'MAYO HOLDINGS AND CONSTRUCTION (MHC), INC.',

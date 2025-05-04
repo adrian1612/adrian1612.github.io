@@ -81,6 +81,18 @@ class Info {
             Address: 'Brgy. Parian Calamba City, Laguna'
         }];
         this.skills = [{
+            Name: 'Blazor Server/Web Assembly',
+            Value: 95
+        },{
+            Name: 'Restful API',
+            Value: 95
+        },{
+            Name: 'JWT Authentication',
+            Value: 95
+        },{
+            Name: 'Dependency Injection',
+            Value: 95
+        },{
             Name: 'C# .NET',
             Value: 95
         }, {

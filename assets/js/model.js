@@ -153,10 +153,10 @@ class Info {
             ]
         }, {
             Title: 'Gatepass Management System',
-            Description: 'Gatepass Management System is a web-based application that helps companies monitor and tract their assets.',
+            Description: 'Gatepass Management System is a web-based application that helps companies monitor and track their assets.',
             Imgs: [
                 { title: 'Dashboard', src: 'assets/img/Projects/Gatepass/Dashboard.png' },
-                { title: 'For Appoval', src: 'assets/img/Projects/Gatepass/ForApproval.png' },
+                { title: 'For Approval', src: 'assets/img/Projects/Gatepass/ForApproval.png' },
             ]
         },{
             Title: 'Accounting System',
@@ -167,7 +167,7 @@ class Info {
             ]
         },{
             Title: 'Attendance System',
-            Description: 'Timekeeping System is a web-based application that helps companies keep track of their employees attendance.',
+            Description: 'Timekeeping System is a web-based application that helps companies keep track of employee attendance.',
             Imgs: [
                 { title: 'Employee', src: 'assets/img/Projects/Attendance/PerEmployee.png' },
                 { title: 'Dashboard', src: 'assets/img/Projects/Attendance/Dashboard.png' },

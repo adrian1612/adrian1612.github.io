@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portfolio</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Adrian Jaspio | .NET Full-Stack Developer</title>
+  <meta content="Portfolio of Adrian Jaspio, a .NET full-stack developer focused on building reliable business systems, APIs, and modern web applications." name="description">
+  <meta content="Adrian Jaspio, .NET Developer, Full-Stack Developer, Portfolio, ASP.NET, C#, SQL Server" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -44,7 +44,7 @@
 
     <div class="social-links text-center">
       <!--ko foreach: Info.social-->
-      <a data-bind="attr: { href: Link }, class: Class" target="_blank"><i data-bind="class: Icon"></i></a>
+      <a data-bind="attr: { href: Link }, class: Class" target="_blank" rel="noopener noreferrer"><i data-bind="class: Icon"></i></a>
       <!--/ko-->
     </div>
 
@@ -52,11 +52,13 @@
       <ul>
         <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
         <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="#services"><i class="bi bi-briefcase navicon"></i> Services</a></li>
+        <li><a href="#highlights"><i class="bi bi-stars navicon"></i> Highlights</a></li>
         <li><a href="#skills"><i class="bi bi-list navicon"></i> Skills</a></li>
         <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
         <li><a href="#project"><i class="bi bi-globe2 navicon"></i> Projects</a></li>
-        <li><a href="#publish"><i class="bi bi-box-fill navicon"></i> Nuget Published</a></li>
-        <li><a href="#git"><i class="bi bi-github navicon"></i> Github Released</a></li>
+        <li><a href="#publish"><i class="bi bi-box-fill navicon"></i> NuGet Packages</a></li>
+        <li><a href="#git"><i class="bi bi-github navicon"></i> GitHub Releases</a></li>
         <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
       </ul>
     </nav>
@@ -71,7 +73,12 @@
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <h2><span data-bind="text: Info.fullname"></span></h2>
-        <p>I'm <span class="typed" data-typed-items="a Programmer, a Father, a loving Husband, a Thinker, a Rider, a very simple Person">Designer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+        <p class="hero-subtitle">Building modern business software with .NET, SQL Server, and scalable architecture.</p>
+        <p>I'm <span class="typed" data-typed-items="a .NET Full-Stack Developer, an API Designer, a Systems Builder, a Continuous Learner">Developer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+        <div class="hero-actions">
+          <a href="#project" class="btn-modern btn-modern-primary">View Projects</a>
+          <a href="/assets/doc/ADRIAN JASPIO.pdf" target="_blank" rel="noopener noreferrer" class="btn-modern btn-modern-outline">Download CV</a>
+        </div>
       </div>
 
     </section><!-- /Hero Section -->
@@ -92,10 +99,18 @@
             <img data-bind="attr: { src: Info.AboutPicture }" class="img-fluid" alt="">
           </div>
           <div class="col-lg-8 content">
-            <h2>.Net Fullstack Developer</h2>
+            <h2>.NET Full-Stack Developer</h2>
             <p class="fst-italic py-3">
               Proficient in both front-end and back-end development using the .NET framework and related technologies.
             </p>
+            <div class="tech-stack-badges">
+              <span class="tech-badge">C# / .NET</span>
+              <span class="tech-badge">ASP.NET MVC</span>
+              <span class="tech-badge">Blazor</span>
+              <span class="tech-badge">REST APIs</span>
+              <span class="tech-badge">SQL Server</span>
+              <span class="tech-badge">Azure-ready</span>
+            </div>
             <div class="row">
               <div class="col-lg-6">
                 <ul>
@@ -123,6 +138,76 @@
       </div>
 
     </section><!-- /About Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section light-background">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Services</h2>
+        <p class="section-subtitle">How I can help teams build and ship reliable software faster.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+          <div class="col-md-6 col-xl-4">
+            <article class="service-modern-card">
+              <div class="service-modern-icon"><i class="bi bi-code-slash"></i></div>
+              <h3>Full-Stack Development</h3>
+              <p>Build robust line-of-business web applications using C#, ASP.NET, JavaScript, and SQL Server.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <article class="service-modern-card">
+              <div class="service-modern-icon"><i class="bi bi-diagram-3"></i></div>
+              <h3>API & Systems Integration</h3>
+              <p>Design and integrate secure REST APIs that connect internal systems and improve data flow.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <article class="service-modern-card">
+              <div class="service-modern-icon"><i class="bi bi-graph-up-arrow"></i></div>
+              <h3>Process Automation</h3>
+              <p>Streamline manual business processes into scalable digital workflows with measurable impact.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Services Section -->
+
+    <!-- Highlights Section -->
+    <section id="highlights" class="highlights section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Highlights</h2>
+        <p class="section-subtitle">A snapshot of delivery impact and professional focus.</p>
+      </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-4">
+          <div class="col-6 col-lg-3">
+            <div class="highlight-card">
+              <h3>6+</h3>
+              <p>Years building business systems</p>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="highlight-card">
+              <h3>20+</h3>
+              <p>Enterprise modules delivered</p>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="highlight-card">
+              <h3>10+</h3>
+              <p>Cross-team integrations</p>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="highlight-card">
+              <h3>99%</h3>
+              <p>Focus on reliability & maintainability</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Highlights Section -->
 
 
     <!-- Skills Section -->
@@ -162,7 +247,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Resume</h2>
-        <a href="/assets/doc/ADRIAN JASPIO.pdf" target="_blank"><i class="bi bi-download"></i>&nbsp;Download resume</a>
+        <a href="/assets/doc/ADRIAN JASPIO.pdf" target="_blank" rel="noopener noreferrer"><i class="bi bi-download"></i>&nbsp;Download resume</a>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -170,15 +255,14 @@
         <div class="row">
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Sumary</h3>
+            <h3 class="resume-title">Summary</h3>
 
             <div class="resume-item pb-0">
               <h4>Adrian Jaspio</h4>
               <p>
                 <em>
-                    a skilled and detail-oriented programmer with expertise in back-end and front-end development, video editing, SQL databases, and technical tools like Photoshop. Proficient in object-oriented programming (OOP), ORM, and web development (HTML, CSS, JavaScript, and jQuery), Adrian is adept at creating efficient software solutions tailored to user needs. With experience in frameworks like ASP.NET MVC and tools like Git for version control, Adrian has a strong foundation in database management, troubleshooting, and collaboration.
-                    a track record of delivering various software projects, including HR management systems, job order systems, IT ticketing solutions, and e-commerce websites. Currently working as a Fullstack Programmer at Mayo Holdings and Construction, Inc.
-                    passion lies in continuous learning and contributing to dynamic teams.
+                    Detail-oriented .NET full-stack developer with hands-on experience delivering business-critical web applications, APIs, and internal systems. Proven track record in designing scalable solutions, improving development workflows, and collaborating with stakeholders to translate requirements into reliable software.
+                    Experienced in C#, ASP.NET MVC, SQL Server, JavaScript, and modern development practices, with a strong focus on maintainability, performance, and user experience.
                 </em>
               </p>
             </div><!-- Edn Resume Item -->
@@ -199,9 +283,9 @@
             <h3 class="resume-title">Professional Experience</h3>
             <!--ko foreach: Info.workExperience-->
             <div class="resume-item">
-              <h4 data-bind="text: Company"></h3>
-              <h5 data-bind="text: Position"></h4>
-              <h6 data-bind="text: Duration"></h5>
+              <h4 data-bind="text: Company"></h4>
+              <h5 data-bind="text: Position"></h5>
+              <h6 data-bind="text: Duration"></h6>
               <p><em data-bind="text: Address"></em></p>
               <ul>
                 <li data-bind="text: Description"></li>
@@ -217,18 +301,20 @@
 
     </section><!-- /Resume Section -->
 
-    <section id="project">
+    <section id="project" class="project section light-background">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
        <h2>Projects</h2>
+       <p class="section-subtitle">Selected systems and business applications I have designed and delivered.</p>
      </div><!-- End Section Title -->
      <div class="container" data-aos="fade-up" data-aos-delay="100">
        <div class="row g-5">
          <!--ko foreach: Info.Projects-->
          <div class="col-md-6">
-          <h5 class="text-decoration-underline"><span data-bind="text: Title"></span></h5>
-          <p data-bind="text: Description"></p>
-          <div data-bind="attr: { id: 'caro_' + $index() }" class="carousel carousel-dark slide" data-bs-ride="carousel">
+          <article class="project-card">
+          <h5 class="project-title"><span data-bind="text: Title"></span></h5>
+          <p class="project-description" data-bind="text: Description"></p>
+          <div data-bind="attr: { id: 'caro_' + $index() }" class="carousel carousel-dark slide project-carousel" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <!--ko foreach: Imgs-->
               <button type="button" data-bind="attr: { 'data-bs-target': '#caro_' + $parentContext.$index(), 'data-bs-slide-to': $index() }, css: { active: $index() == 0 }"></button>
@@ -253,6 +339,7 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
+          </article>
          </div>
          <!--/ko-->
        </div>
@@ -260,21 +347,22 @@
    </section>
 
 
-    <section id="publish">
+    <section id="publish" class="section">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-       <h2>Nuget Published</h2>
+       <h2>NuGet Packages</h2>
+       <p class="section-subtitle">Reusable libraries published for real-world development workflows.</p>
      </div><!-- End Section Title -->
      <div class="container" data-aos="fade-up" data-aos-delay="100">
        <div class="row g-2">
          <!--ko foreach: Info.nugetPublished-->
-         <div class="col-md-3">
-           <div style="border: 1px solid #ddd; padding: 10px; width: 300px; text-align: center;">
+         <div class="col-md-6 col-lg-4">
+           <div class="resource-card">
              <img data-bind="attr: { src: Icon }" alt="NuGet Logo" width="100">
              <h3><span data-bind="text:Title"></span></h3>
              <p>Latest Version: <strong data-bind="text: Version"></strong></p>
-             <a data-bind="attr: { href: Link }" target="_blank" style="text-decoration: none; color: white;">
-                 <button style="background-color: #004880; color: white; padding: 10px 15px; border: none; cursor: pointer;">
+             <a data-bind="attr: { href: Link }" target="_blank" rel="noopener noreferrer">
+                 <button class="resource-btn">
                      View on NuGet
                  </button>
              </a>
@@ -285,22 +373,23 @@
      </div>
    </section>
 
-   <section id="git">
+   <section id="git" class="section light-background">
     <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
-     <h2>Github Released</h2>
+     <h2>GitHub Releases</h2>
+     <p class="section-subtitle">Open-source tools and release builds available for download.</p>
    </div><!-- End Section Title -->
    <div class="container" data-aos="fade-up" data-aos-delay="100">
      <div class="row g-2">
        <!--ko foreach: Info.gitRelease-->
-       <div class="col-md-3">
-         <div style="border: 1px solid #ddd; padding: 10px; width: 300px; text-align: center;">
+       <div class="col-md-6 col-lg-4">
+         <div class="resource-card">
            <i class="bi bi-github fs-1"></i>
-           <h6><span data-bind="text:Title"></span></h3>
+           <h6><span data-bind="text:Title"></span></h6>
             <p data-bind="text: Description"></p>
-           <a data-bind="attr: { href: Link }" target="_blank" style="text-decoration: none; color: white;">
-               <button style="background-color: #004880; color: white; padding: 10px 15px; border: none; cursor: pointer;">
-                   View on Github
+           <a data-bind="attr: { href: Link }" target="_blank" rel="noopener noreferrer">
+               <button class="resource-btn">
+                   View on GitHub
                </button>
            </a>
        </div>
@@ -322,7 +411,7 @@
 
         <div class="row gy-4">
 
-          <div class="col-lg-5">
+          <div class="col-lg-8 mx-auto">
 
             <div class="info-wrap">
               <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">

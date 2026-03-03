@@ -216,7 +216,7 @@
 
     </section><!-- /Resume Section -->
 
-    <section id="project">
+    <section id="project" class="project section light-background">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
        <h2>Projects</h2>
@@ -225,9 +225,10 @@
        <div class="row g-5">
          <!--ko foreach: Info.Projects-->
          <div class="col-md-6">
-          <h5 class="text-decoration-underline"><span data-bind="text: Title"></span></h5>
-          <p data-bind="text: Description"></p>
-          <div data-bind="attr: { id: 'caro_' + $index() }" class="carousel carousel-dark slide" data-bs-ride="carousel">
+          <article class="project-card">
+          <h5 class="project-title"><span data-bind="text: Title"></span></h5>
+          <p class="project-description" data-bind="text: Description"></p>
+          <div data-bind="attr: { id: 'caro_' + $index() }" class="carousel carousel-dark slide project-carousel" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <!--ko foreach: Imgs-->
               <button type="button" data-bind="attr: { 'data-bs-target': '#caro_' + $parentContext.$index(), 'data-bs-slide-to': $index() }, css: { active: $index() == 0 }"></button>
@@ -252,6 +253,7 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
+          </article>
          </div>
          <!--/ko-->
        </div>
@@ -259,16 +261,16 @@
    </section>
 
 
-    <section id="publish">
+    <section id="publish" class="section">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-       <h2>Nuget Published</h2>
+       <h2>NuGet Packages</h2>
      </div><!-- End Section Title -->
      <div class="container" data-aos="fade-up" data-aos-delay="100">
        <div class="row g-2">
          <!--ko foreach: Info.nugetPublished-->
-         <div class="col-md-3">
-           <div style="border: 1px solid #ddd; padding: 10px; width: 300px; text-align: center;">
+         <div class="col-md-6 col-lg-4">
+           <div class="resource-card">
              <img data-bind="attr: { src: Icon }" alt="NuGet Logo" width="100">
              <h3><span data-bind="text:Title"></span></h3>
              <p>Latest Version: <strong data-bind="text: Version"></strong></p>
@@ -284,16 +286,16 @@
      </div>
    </section>
 
-   <section id="git">
+   <section id="git" class="section light-background">
     <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
-     <h2>Github Released</h2>
+     <h2>GitHub Releases</h2>
    </div><!-- End Section Title -->
    <div class="container" data-aos="fade-up" data-aos-delay="100">
      <div class="row g-2">
        <!--ko foreach: Info.gitRelease-->
-       <div class="col-md-3">
-         <div style="border: 1px solid #ddd; padding: 10px; width: 300px; text-align: center;">
+       <div class="col-md-6 col-lg-4">
+         <div class="resource-card">
            <i class="bi bi-github fs-1"></i>
            <h6><span data-bind="text:Title"></span></h6>
             <p data-bind="text: Description"></p>

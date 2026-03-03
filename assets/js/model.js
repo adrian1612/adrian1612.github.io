@@ -10,7 +10,7 @@ class Info {
         this.website = { Name: 'adrian1612.github.io', Link: 'https://adrian1612.github.io' };
         this.profile = 'assets/img/profile.jpg';
         this.banner = 'assets/img/banner4.jpg';
-        this.AboutPicture = 'assets/img/CloseUpSide2.jpg';
+        this.AboutPicture = 'assets/img/CloseUpSide2.1.png';
         this.social = [
             { 
                 Name: 'facebook', 

@@ -15,7 +15,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -53,7 +53,6 @@
         <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
         <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
         <li><a href="#services"><i class="bi bi-briefcase navicon"></i> Services</a></li>
-        <li><a href="#highlights"><i class="bi bi-stars navicon"></i> Highlights</a></li>
         <li><a href="#skills"><i class="bi bi-list navicon"></i> Skills</a></li>
         <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
         <li><a href="#project"><i class="bi bi-globe2 navicon"></i> Projects</a></li>
@@ -69,11 +68,17 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
-      <img data-bind="attr: { src: Info.banner }" alt="" data-aos="fade-in" class="">
+      <canvas class="hero-particles" aria-hidden="true"></canvas>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <p class="hero-eyebrow">.NET Full-Stack Developer</p>
         <h2><span data-bind="text: Info.fullname"></span></h2>
         <p>I'm <span class="typed" data-typed-items="a .NET Full-Stack Developer, a Problem Solver, a Systems Builder, a Continuous Learner">Developer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+        <p class="hero-subtitle">I design and deliver reliable business applications, internal platforms, and API-driven systems that teams can confidently run in production.</p>
+        <div class="hero-actions">
+          <a href="#project" class="btn-modern btn-modern-primary">View Projects</a>
+          <a href="#contact" class="btn-modern btn-modern-ghost">Let's Work Together</a>
+        </div>
       </div>
 
     </section><!-- /Hero Section -->
@@ -168,42 +173,6 @@
       </div>
     </section><!-- /Services Section -->
 
-    <!-- Highlights Section -->
-    <section id="highlights" class="highlights section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Highlights</h2>
-        <p class="section-subtitle">A snapshot of delivery impact and professional focus.</p>
-      </div>
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row g-4">
-          <div class="col-6 col-lg-3">
-            <div class="highlight-card">
-              <h3>6+</h3>
-              <p>Years building business systems</p>
-            </div>
-          </div>
-          <div class="col-6 col-lg-3">
-            <div class="highlight-card">
-              <h3>20+</h3>
-              <p>Enterprise modules delivered</p>
-            </div>
-          </div>
-          <div class="col-6 col-lg-3">
-            <div class="highlight-card">
-              <h3>10+</h3>
-              <p>Cross-team integrations</p>
-            </div>
-          </div>
-          <div class="col-6 col-lg-3">
-            <div class="highlight-card">
-              <h3>99%</h3>
-              <p>Focus on reliability & maintainability</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- /Highlights Section -->
-
 
     <!-- Skills Section -->
     <section id="skills" class="skills section light-background">
@@ -211,13 +180,13 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Skills</h2>
+        <p class="section-subtitle">Core technologies and engineering strengths I use to ship production-ready systems.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="row skills-content skills-animation">
-
-          <div class="col-lg-6">
+        <div class="skills-content skills-animation">
+          <div class="skills-list">
             <!--ko foreach: Info.skills-->
             <div class="progress">
               <span class="skill"><span data-bind="text: Name"></span> <i class="val"><span data-bind="text: Value"></span>%</i></span>
@@ -227,7 +196,6 @@
             </div><!-- End Skills Item -->
             <!--/ko-->
           </div>
-
         </div>
 
       </div>
@@ -242,6 +210,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Resume</h2>
+        <p class="section-subtitle">Professional experience, education, and responsibilities across enterprise software roles.</p>
         <a href="/assets/doc/ADRIAN JASPIO.pdf" target="_blank" rel="noopener noreferrer"><i class="bi bi-download"></i>&nbsp;Download resume</a>
       </div><!-- End Section Title -->
 
@@ -346,6 +315,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
        <h2>NuGet Packages</h2>
+       <p class="section-subtitle">Reusable packages and components published for practical .NET development workflows.</p>
      </div><!-- End Section Title -->
      <div class="container" data-aos="fade-up" data-aos-delay="100">
        <div class="row g-2">
@@ -355,11 +325,7 @@
              <img data-bind="attr: { src: Icon }" alt="NuGet Logo" width="100">
              <h3><span data-bind="text:Title"></span></h3>
              <p>Latest Version: <strong data-bind="text: Version"></strong></p>
-             <a data-bind="attr: { href: Link }" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: white;">
-                 <button style="background-color: #004880; color: white; padding: 10px 15px; border: none; cursor: pointer;">
-                     View on NuGet
-                 </button>
-             </a>
+             <a data-bind="attr: { href: Link }" target="_blank" rel="noopener noreferrer" class="resource-btn">View on NuGet</a>
          </div>
          </div>
          <!--/ko-->
@@ -371,6 +337,7 @@
     <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
      <h2>GitHub Releases</h2>
+     <p class="section-subtitle">Production utilities and tools released publicly with source code and documentation.</p>
    </div><!-- End Section Title -->
    <div class="container" data-aos="fade-up" data-aos-delay="100">
      <div class="row g-2">
@@ -380,11 +347,7 @@
            <i class="bi bi-github fs-1"></i>
            <h6><span data-bind="text:Title"></span></h6>
             <p data-bind="text: Description"></p>
-           <a data-bind="attr: { href: Link }" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: white;">
-               <button style="background-color: #004880; color: white; padding: 10px 15px; border: none; cursor: pointer;">
-                   View on Github
-               </button>
-           </a>
+           <a data-bind="attr: { href: Link }" target="_blank" rel="noopener noreferrer" class="resource-btn">View on GitHub</a>
        </div>
        </div>
        <!--/ko-->
@@ -398,6 +361,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Contact</h2>
+        <p class="section-subtitle">Open to full-time opportunities and freelance projects focused on web and system development.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -426,12 +390,12 @@
               <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
                 <i class="bi bi-envelope flex-shrink-0"></i>
                 <div>
-                  <h3>Email Us</h3>
+                  <h3>Email Me</h3>
                   <p>adrianjaspio@gmail.com</p>
                 </div>
               </div><!-- End Info Item -->
 
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4769.610493620556!2d121.15980447587746!3d14.19076018697786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd63e79fc8c97d%3A0xe9992988819f29b0!2sTita%20Beth%20Store!5e1!3m2!1sen!2sph!4v1738055408093!5m2!1sen!2sph" style="border:0; width:100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4769.610493620556!2d121.15980447587746!3d14.19076018697786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd63e79fc8c97d%3A0xe9992988819f29b0!2sTita%20Beth%20Store!5e1!3m2!1sen!2sph!4v1738055408093!5m2!1sen!2sph" class="map-embed" title="Calamba City location map" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
 

@@ -106,6 +106,220 @@
   }
 
   /**
+   * Hero particles background
+   */
+  function initHeroParticles() {
+    const canvas = document.querySelector('.hero .hero-particles');
+    if (!canvas) return;
+    const heroSection = canvas.closest('.hero');
+    if (!heroSection) return;
+
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let reducedMotion = reducedMotionQuery.matches;
+    let width = 0;
+    let height = 0;
+    let particles = [];
+    let animationFrameId = null;
+    let pointer = { x: 0, y: 0, active: false };
+
+    const maxDpr = Math.min(window.devicePixelRatio || 1, 2);
+    const circleBaseColor = '205, 233, 255';
+    const lineBaseColor = '142, 198, 252';
+
+    function targetCount() {
+      return Math.max(34, Math.min(96, Math.floor((width * height) / 19000)));
+    }
+
+    function createParticle() {
+      return {
+        x: Math.random() * width,
+        y: Math.random() * height,
+        vx: (Math.random() - 0.5) * 0.36,
+        vy: (Math.random() - 0.5) * 0.36,
+        radius: 0.9 + (Math.random() * 2.2),
+        alpha: 0.3 + (Math.random() * 0.5)
+      };
+    }
+
+    function seedParticles() {
+      particles = Array.from({ length: targetCount() }, createParticle);
+    }
+
+    function resizeCanvas() {
+      width = canvas.clientWidth;
+      height = canvas.clientHeight;
+      canvas.width = Math.max(1, Math.floor(width * maxDpr));
+      canvas.height = Math.max(1, Math.floor(height * maxDpr));
+      ctx.setTransform(maxDpr, 0, 0, maxDpr, 0, 0);
+      seedParticles();
+    }
+
+    function drawConnections() {
+      const maxDistance = 135;
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.hypot(dx, dy);
+          if (dist > maxDistance) continue;
+          const opacity = (1 - (dist / maxDistance)) * 0.28;
+          ctx.strokeStyle = `rgba(${lineBaseColor}, ${opacity})`;
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.stroke();
+        }
+      }
+    }
+
+    function drawPointerInfluence() {
+      if (!pointer.active) return;
+
+      const linkDistance = 150;
+      particles.forEach(particle => {
+        const dx = pointer.x - particle.x;
+        const dy = pointer.y - particle.y;
+        const dist = Math.hypot(dx, dy);
+        if (dist > linkDistance) return;
+
+        const opacity = (1 - (dist / linkDistance)) * 0.35;
+        ctx.strokeStyle = `rgba(184, 225, 255, ${opacity})`;
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(pointer.x, pointer.y);
+        ctx.lineTo(particle.x, particle.y);
+        ctx.stroke();
+      });
+
+      const glow = ctx.createRadialGradient(pointer.x, pointer.y, 2, pointer.x, pointer.y, 70);
+      glow.addColorStop(0, 'rgba(194, 231, 255, 0.34)');
+      glow.addColorStop(1, 'rgba(194, 231, 255, 0)');
+      ctx.fillStyle = glow;
+      ctx.beginPath();
+      ctx.arc(pointer.x, pointer.y, 70, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    function applyPointerForce(particle) {
+      if (!pointer.active) return;
+
+      const dx = particle.x - pointer.x;
+      const dy = particle.y - pointer.y;
+      const distance = Math.hypot(dx, dy);
+      const influence = 170;
+
+      if (distance === 0 || distance > influence) return;
+
+      const force = (1 - (distance / influence)) * 0.035;
+      particle.vx += (dx / distance) * force;
+      particle.vy += (dy / distance) * force;
+    }
+
+    function clampVelocity(particle) {
+      const maxSpeed = 0.95;
+      particle.vx = Math.max(-maxSpeed, Math.min(maxSpeed, particle.vx));
+      particle.vy = Math.max(-maxSpeed, Math.min(maxSpeed, particle.vy));
+    }
+
+    function drawFrame(animate) {
+      ctx.clearRect(0, 0, width, height);
+
+      particles.forEach(particle => {
+        if (animate) {
+          applyPointerForce(particle);
+          particle.vx *= 0.992;
+          particle.vy *= 0.992;
+          clampVelocity(particle);
+
+          particle.x += particle.vx;
+          particle.y += particle.vy;
+
+          if (particle.x < -8) particle.x = width + 8;
+          if (particle.x > width + 8) particle.x = -8;
+          if (particle.y < -8) particle.y = height + 8;
+          if (particle.y > height + 8) particle.y = -8;
+        }
+
+        ctx.fillStyle = `rgba(${circleBaseColor}, ${particle.alpha})`;
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
+        ctx.fill();
+      });
+
+      drawConnections();
+      drawPointerInfluence();
+    }
+
+    function animate() {
+      drawFrame(true);
+      animationFrameId = window.requestAnimationFrame(animate);
+    }
+
+    function start() {
+      if (animationFrameId !== null) {
+        window.cancelAnimationFrame(animationFrameId);
+        animationFrameId = null;
+      }
+
+      if (reducedMotion) {
+        drawFrame(false);
+        return;
+      }
+
+      animate();
+    }
+
+    function handleVisibility() {
+      if (document.hidden && animationFrameId !== null) {
+        window.cancelAnimationFrame(animationFrameId);
+        animationFrameId = null;
+      } else if (!document.hidden) {
+        start();
+      }
+    }
+
+    function handleReducedMotionChange(event) {
+      reducedMotion = event.matches;
+      if (reducedMotion) {
+        pointer.active = false;
+      }
+      start();
+    }
+
+    function handlePointerMove(event) {
+      if (reducedMotion) return;
+      const bounds = canvas.getBoundingClientRect();
+      pointer.x = event.clientX - bounds.left;
+      pointer.y = event.clientY - bounds.top;
+      pointer.active = true;
+    }
+
+    function handlePointerLeave() {
+      pointer.active = false;
+    }
+
+    resizeCanvas();
+    start();
+
+    window.addEventListener('resize', resizeCanvas);
+    document.addEventListener('visibilitychange', handleVisibility);
+    heroSection.addEventListener('pointermove', handlePointerMove);
+    heroSection.addEventListener('pointerleave', handlePointerLeave);
+
+    if (typeof reducedMotionQuery.addEventListener === 'function') {
+      reducedMotionQuery.addEventListener('change', handleReducedMotionChange);
+    } else if (typeof reducedMotionQuery.addListener === 'function') {
+      reducedMotionQuery.addListener(handleReducedMotionChange);
+    }
+  }
+
+  initHeroParticles();
+
+  /**
    * Initiate Pure Counter
    */
   new PureCounter();

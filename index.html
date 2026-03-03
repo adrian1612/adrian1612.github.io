@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portfolio</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Adrian Jaspio | .NET Full-Stack Developer</title>
+  <meta content="Portfolio of Adrian Jaspio, a .NET full-stack developer focused on building reliable business systems, APIs, and modern web applications." name="description">
+  <meta content="Adrian Jaspio, .NET Developer, Full-Stack Developer, Portfolio, ASP.NET, C#, SQL Server" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -44,7 +44,7 @@
 
     <div class="social-links text-center">
       <!--ko foreach: Info.social-->
-      <a data-bind="attr: { href: Link }, class: Class" target="_blank"><i data-bind="class: Icon"></i></a>
+      <a data-bind="attr: { href: Link }, class: Class" target="_blank" rel="noopener noreferrer"><i data-bind="class: Icon"></i></a>
       <!--/ko-->
     </div>
 
@@ -71,7 +71,8 @@
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <h2><span data-bind="text: Info.fullname"></span></h2>
-        <p>I'm <span class="typed" data-typed-items="a Programmer, a Father, a loving Husband, a Thinker, a Rider, a very simple Person">Designer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+        <p class="hero-subtitle">Building modern business software with .NET, SQL Server, and scalable architecture.</p>
+        <p>I'm <span class="typed" data-typed-items="a .NET Full-Stack Developer, an API Designer, a Systems Builder, a Continuous Learner">Developer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
       </div>
 
     </section><!-- /Hero Section -->
@@ -162,7 +163,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Resume</h2>
-        <a href="/assets/doc/ADRIAN JASPIO.pdf" target="_blank"><i class="bi bi-download"></i>&nbsp;Download resume</a>
+        <a href="/assets/doc/ADRIAN JASPIO.pdf" target="_blank" rel="noopener noreferrer"><i class="bi bi-download"></i>&nbsp;Download resume</a>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -170,15 +171,14 @@
         <div class="row">
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Sumary</h3>
+            <h3 class="resume-title">Summary</h3>
 
             <div class="resume-item pb-0">
               <h4>Adrian Jaspio</h4>
               <p>
                 <em>
-                    a skilled and detail-oriented programmer with expertise in back-end and front-end development, video editing, SQL databases, and technical tools like Photoshop. Proficient in object-oriented programming (OOP), ORM, and web development (HTML, CSS, JavaScript, and jQuery), Adrian is adept at creating efficient software solutions tailored to user needs. With experience in frameworks like ASP.NET MVC and tools like Git for version control, Adrian has a strong foundation in database management, troubleshooting, and collaboration.
-                    a track record of delivering various software projects, including HR management systems, job order systems, IT ticketing solutions, and e-commerce websites. Currently working as a Fullstack Programmer at Mayo Holdings and Construction, Inc.
-                    passion lies in continuous learning and contributing to dynamic teams.
+                    Detail-oriented .NET full-stack developer with hands-on experience delivering business-critical web applications, APIs, and internal systems. Proven track record in designing scalable solutions, improving development workflows, and collaborating with stakeholders to translate requirements into reliable software.
+                    Experienced in C#, ASP.NET MVC, SQL Server, JavaScript, and modern development practices, with a strong focus on maintainability, performance, and user experience.
                 </em>
               </p>
             </div><!-- Edn Resume Item -->
@@ -199,9 +199,9 @@
             <h3 class="resume-title">Professional Experience</h3>
             <!--ko foreach: Info.workExperience-->
             <div class="resume-item">
-              <h4 data-bind="text: Company"></h3>
-              <h5 data-bind="text: Position"></h4>
-              <h6 data-bind="text: Duration"></h5>
+              <h4 data-bind="text: Company"></h4>
+              <h5 data-bind="text: Position"></h5>
+              <h6 data-bind="text: Duration"></h6>
               <p><em data-bind="text: Address"></em></p>
               <ul>
                 <li data-bind="text: Description"></li>
@@ -217,7 +217,7 @@
 
     </section><!-- /Resume Section -->
 
-    <section id="project">
+    <section id="project" class="project section light-background">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
        <h2>Projects</h2>
@@ -226,9 +226,10 @@
        <div class="row g-5">
          <!--ko foreach: Info.Projects-->
          <div class="col-md-6">
-          <h5 class="text-decoration-underline"><span data-bind="text: Title"></span></h5>
-          <p data-bind="text: Description"></p>
-          <div data-bind="attr: { id: 'caro_' + $index() }" class="carousel carousel-dark slide" data-bs-ride="carousel">
+          <article class="project-card">
+          <h5 class="project-title"><span data-bind="text: Title"></span></h5>
+          <p class="project-description" data-bind="text: Description"></p>
+          <div data-bind="attr: { id: 'caro_' + $index() }" class="carousel carousel-dark slide project-carousel" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <!--ko foreach: Imgs-->
               <button type="button" data-bind="attr: { 'data-bs-target': '#caro_' + $parentContext.$index(), 'data-bs-slide-to': $index() }, css: { active: $index() == 0 }"></button>
@@ -253,6 +254,7 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
+          </article>
          </div>
          <!--/ko-->
        </div>
@@ -260,21 +262,21 @@
    </section>
 
 
-    <section id="publish">
+    <section id="publish" class="section">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-       <h2>Nuget Published</h2>
+       <h2>NuGet Packages</h2>
      </div><!-- End Section Title -->
      <div class="container" data-aos="fade-up" data-aos-delay="100">
        <div class="row g-2">
          <!--ko foreach: Info.nugetPublished-->
-         <div class="col-md-3">
-           <div style="border: 1px solid #ddd; padding: 10px; width: 300px; text-align: center;">
+         <div class="col-md-6 col-lg-4">
+           <div class="resource-card">
              <img data-bind="attr: { src: Icon }" alt="NuGet Logo" width="100">
              <h3><span data-bind="text:Title"></span></h3>
              <p>Latest Version: <strong data-bind="text: Version"></strong></p>
-             <a data-bind="attr: { href: Link }" target="_blank" style="text-decoration: none; color: white;">
-                 <button style="background-color: #004880; color: white; padding: 10px 15px; border: none; cursor: pointer;">
+             <a data-bind="attr: { href: Link }" target="_blank" rel="noopener noreferrer">
+                 <button class="resource-btn">
                      View on NuGet
                  </button>
              </a>
@@ -285,22 +287,22 @@
      </div>
    </section>
 
-   <section id="git">
+   <section id="git" class="section light-background">
     <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
-     <h2>Github Released</h2>
+     <h2>GitHub Releases</h2>
    </div><!-- End Section Title -->
    <div class="container" data-aos="fade-up" data-aos-delay="100">
      <div class="row g-2">
        <!--ko foreach: Info.gitRelease-->
-       <div class="col-md-3">
-         <div style="border: 1px solid #ddd; padding: 10px; width: 300px; text-align: center;">
+       <div class="col-md-6 col-lg-4">
+         <div class="resource-card">
            <i class="bi bi-github fs-1"></i>
-           <h6><span data-bind="text:Title"></span></h3>
+           <h6><span data-bind="text:Title"></span></h6>
             <p data-bind="text: Description"></p>
-           <a data-bind="attr: { href: Link }" target="_blank" style="text-decoration: none; color: white;">
-               <button style="background-color: #004880; color: white; padding: 10px 15px; border: none; cursor: pointer;">
-                   View on Github
+           <a data-bind="attr: { href: Link }" target="_blank" rel="noopener noreferrer">
+               <button class="resource-btn">
+                   View on GitHub
                </button>
            </a>
        </div>

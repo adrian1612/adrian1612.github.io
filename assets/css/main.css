@@ -1273,3 +1273,78 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+/*--------------------------------------------------------------
+# Modern Portfolio Enhancements
+--------------------------------------------------------------*/
+.hero .hero-subtitle {
+  margin: 10px 0 18px;
+  color: color-mix(in srgb, #ffffff, transparent 15%);
+  font-size: 18px;
+  max-width: 760px;
+}
+
+.project .project-card,
+.resource-card {
+  background: linear-gradient(145deg, color-mix(in srgb, var(--surface-color), #ffffff 4%), color-mix(in srgb, var(--surface-color), #000000 1%));
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 86%);
+  border-radius: 18px;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.08);
+}
+
+.project .project-card {
+  height: 100%;
+  padding: 22px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project .project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 38px rgba(0, 0, 0, 0.12);
+}
+
+.project .project-title {
+  text-decoration: none;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.project .project-description {
+  color: color-mix(in srgb, var(--default-color), transparent 18%);
+  min-height: 68px;
+}
+
+.project .project-carousel {
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.resource-card {
+  padding: 18px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.resource-card a {
+  text-decoration: none;
+}
+
+.resource-btn {
+  background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.resource-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(13, 110, 253, 0.35);
+}

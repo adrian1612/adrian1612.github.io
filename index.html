@@ -52,6 +52,133 @@
       .animfolio-container .aj-footer-inner { padding:0 18px; }
       .animfolio-container .aj-code-preview { min-height:100px; padding:14px; }
     }
+
+    /* Adrian portfolio refinement — tighter editorial hierarchy */
+    .animfolio-container {
+      --animfolio-section-spacing: 64px;
+    }
+    .animfolio-container .animfolio-inner {
+      max-width: 1120px;
+    }
+    .animfolio-container .animfolio-section__header {
+      max-width: 780px;
+      margin: 0 0 30px;
+      text-align: left;
+    }
+    .animfolio-container .animfolio-section__title {
+      font-size: clamp(1.45rem, 2.7vw, 2rem);
+      line-height: 1.2;
+      letter-spacing: -0.045em;
+      margin-bottom: 10px;
+    }
+    .animfolio-container .animfolio-section__subtitle {
+      max-width: 680px;
+      margin: 0;
+      font-size: 0.96rem;
+      line-height: 1.7;
+    }
+    .animfolio-container .animfolio-hero__name {
+      font-size: clamp(3.25rem, 8vw, 6.25rem);
+      line-height: 0.98;
+      letter-spacing: -0.075em;
+    }
+    .animfolio-container .animfolio-hero__title {
+      margin-top: 20px;
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      letter-spacing: -0.025em;
+    }
+    .animfolio-container .animfolio-hero__subtitle {
+      max-width: 620px;
+      margin: 18px auto 0;
+      font-size: clamp(0.98rem, 1.5vw, 1.1rem);
+      line-height: 1.75;
+      color: var(--animfolio-text-secondary);
+    }
+    .animfolio-container .animfolio-about {
+      text-align: left;
+    }
+    .animfolio-container .animfolio-about__bio {
+      max-width: 900px;
+      font-size: 1.08rem;
+      line-height: 1.85;
+      color: var(--animfolio-text-secondary);
+    }
+    .animfolio-container .animfolio-about__fun-facts {
+      margin-top: 26px;
+      gap: 12px;
+    }
+    .animfolio-container .animfolio-about__fun-fact {
+      border-radius: 10px;
+      line-height: 1.6;
+      padding: 15px 18px;
+    }
+    .animfolio-container .animfolio-timeline__content {
+      padding: 24px 26px;
+    }
+    .animfolio-container .animfolio-timeline__role {
+      font-size: 1.05rem;
+      line-height: 1.45;
+    }
+    .animfolio-container .animfolio-timeline__date {
+      margin-top: 7px;
+      font-size: 0.78rem;
+      letter-spacing: 0.025em;
+    }
+    .animfolio-container .animfolio-skills__category {
+      padding: 24px;
+      transition: transform .22s ease, border-color .22s ease, background .22s ease;
+    }
+    .animfolio-container .animfolio-skills__category:hover {
+      transform: translateY(-3px);
+      border-color: var(--animfolio-accent);
+    }
+    .animfolio-container .animfolio-skills__category-title {
+      margin-bottom: 18px;
+      font-size: 1rem;
+      letter-spacing: -0.02em;
+    }
+    .animfolio-container .animfolio-project {
+      transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
+    }
+    .animfolio-container .animfolio-project:hover {
+      transform: translateY(-4px);
+      border-color: var(--animfolio-accent);
+      box-shadow: 0 18px 48px rgba(0,0,0,.18);
+    }
+    .animfolio-container .animfolio-project__description,
+    .animfolio-container .animfolio-timeline__description {
+      font-size: 0.94rem;
+      line-height: 1.8;
+    }
+    .animfolio-container .aj-code-preview {
+      min-height: 132px;
+      padding: 20px 22px;
+      font-size: 11.5px;
+    }
+    .animfolio-container .animfolio-contact {
+      max-width: 760px;
+      margin-left: 0;
+      text-align: left;
+    }
+    .animfolio-container .animfolio-contact__heading {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      letter-spacing: -0.055em;
+      line-height: 1.12;
+    }
+    .animfolio-container .animfolio-contact__description {
+      max-width: 650px;
+      line-height: 1.8;
+    }
+    @media (max-width: 760px) {
+      .animfolio-container { --animfolio-section-spacing: 48px; }
+      .animfolio-container .animfolio-inner { padding-left: 20px; padding-right: 20px; }
+      .animfolio-container .animfolio-section__header { margin-bottom: 22px; }
+      .animfolio-container .animfolio-hero__name { font-size: clamp(2.8rem, 13vw, 4.5rem); }
+      .animfolio-container .animfolio-timeline__content { padding: 20px; }
+      .animfolio-container .animfolio-skills__category { padding: 20px; }
+      .animfolio-container .animfolio-contact { text-align: left; }
+    }
+
   </style>
   <script>
     document.documentElement.classList.add('animfolio-js');

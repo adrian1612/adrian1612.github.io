@@ -3,131 +3,206 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f3f1eb">
-  <meta name="description" content="Adrian Jaspio is a software developer building practical business applications, system integrations, and independent software products.">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Adrian Jaspio — Software Developer / Programmer Analyst. Building practical business applications, developer tools, and independent software products.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Adrian Jaspio — Software Developer">
   <meta property="og:description" content="Practical software development across business applications, integrations, and independent products.">
   <meta property="og:url" content="https://adrian1612.github.io/">
   <link rel="canonical" href="https://adrian1612.github.io/">
-  <title>Adrian Jaspio — Software Developer</title>
   <link rel="icon" href="assets/img/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/portfolio.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rahulmahadik/animfolio-html@f40050594decfa544edbc0a43cab79e7fe212dc1/format-01-developer/assets/css/animfolio-base.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rahulmahadik/animfolio-html@f40050594decfa544edbc0a43cab79e7fe212dc1/format-01-developer/assets/css/animfolio-animations.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rahulmahadik/animfolio-html@f40050594decfa544edbc0a43cab79e7fe212dc1/format-01-developer/assets/css/animfolio-nav.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rahulmahadik/animfolio-html@f40050594decfa544edbc0a43cab79e7fe212dc1/format-01-developer/assets/css/animfolio-contact.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rahulmahadik/animfolio-html@f40050594decfa544edbc0a43cab79e7fe212dc1/format-01-developer/assets/css/animfolio-gallery.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rahulmahadik/animfolio-html@f40050594decfa544edbc0a43cab79e7fe212dc1/format-01-developer/assets/css/animfolio-qr.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rahulmahadik/animfolio-html@f40050594decfa544edbc0a43cab79e7fe212dc1/format-01-developer/assets/css/animfolio-print.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rahulmahadik/animfolio-html@f40050594decfa544edbc0a43cab79e7fe212dc1/format-01-developer/assets/css/format.css">
+  <style>
+    .animfolio-container {
+      --animfolio-accent: #7F77DD !important;
+      --animfolio-accent-hover: #756dd3 !important;
+      --animfolio-secondary: #1D9E75 !important;
+      --animfolio-font-heading: 'Inter', sans-serif;
+      --animfolio-font-body: 'Inter', sans-serif;
+      --animfolio-font-mono: 'JetBrains Mono', monospace;
+      --animfolio-section-spacing: 76px;
+    }
+    .animfolio-container .aj-code-preview {
+      display:flex; flex-direction:column; gap:10px; min-height:118px;
+      padding:18px 20px; border-bottom:1px solid var(--animfolio-border);
+      background:linear-gradient(135deg,rgba(127,119,221,.10),rgba(29,158,117,.06));
+      font:12px/1.8 'JetBrains Mono',monospace; color:var(--animfolio-text-secondary);
+    }
+    .animfolio-container .aj-code-preview strong { color:var(--animfolio-accent-text); font-weight:600; }
+    .animfolio-container .aj-code-preview .dim { opacity:.55; }
+    .animfolio-container .aj-contact-links { display:flex; flex-wrap:wrap; gap:12px; margin-top:24px; }
+    .animfolio-container .aj-contact-links a { text-decoration:none; }
+    .animfolio-container .aj-footer { padding:24px 0 32px; border-top:1px solid var(--animfolio-border); color:var(--animfolio-text-muted); font:11px/1.7 'JetBrains Mono',monospace; }
+    .animfolio-container .aj-footer-inner { max-width:var(--animfolio-container-width,1200px); margin:0 auto; padding:0 24px; display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+    .animfolio-container .animfolio-section__subtitle { max-width:720px; color:var(--animfolio-text-secondary); }
+    .animfolio-container .animfolio-skills__category { padding:22px; border:1px solid var(--animfolio-border); border-radius:var(--animfolio-radius); background:var(--animfolio-surface); }
+    .animfolio-container .animfolio-skills__category-title { margin-top:0; }
+    .animfolio-container .animfolio-project__description, .animfolio-container .animfolio-timeline__description { line-height:1.75; }
+    @media(max-width:640px) {
+      .animfolio-container .aj-footer-inner { padding:0 18px; }
+      .animfolio-container .aj-code-preview { min-height:100px; padding:14px; }
+    }
+  </style>
+  <script>
+    document.documentElement.classList.add('animfolio-js');
+    (function(){function reveal(){if(window.animfolio&&window.animfolio._initialized)return;document.querySelectorAll('[data-animfolio-animate],.animfolio-stagger__item').forEach(function(el){el.classList.add('animfolio-visible');});}window.addEventListener('load',function(){setTimeout(reveal,1800);});setTimeout(reveal,4500);})();
+  </script>
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Skip to content</a>
+<div class="animfolio-container animfolio-container--dark animfolio-container--format-01 animfolio-container--one-page" data-animfolio-scheme="dark" data-animfolio-format="format-01-developer" data-animfolio-intensity="medium">
+  <a href="#hero" class="animfolio-skip-link">Skip to main content</a>
+  <nav class="animfolio-nav animfolio-nav--horizontal animfolio-nav--sticky" role="navigation" aria-label="Portfolio navigation">
+    <a href="#hero" class="animfolio-nav__logo">Adrian Jaspio<span class="animfolio-nav__logo-subtitle">Software Developer</span></a>
+    <button class="animfolio-nav__toggle" aria-expanded="false" aria-controls="animfolio-nav-menu" aria-label="Toggle navigation"><span class="animfolio-nav__toggle-bar" aria-hidden="true"></span><span class="animfolio-nav__toggle-bar" aria-hidden="true"></span><span class="animfolio-nav__toggle-bar" aria-hidden="true"></span></button>
+    <ul class="animfolio-nav__list" id="animfolio-nav-menu">
+      <li class="animfolio-nav__item"><a href="#about" class="animfolio-nav__link">About</a></li>
+      <li class="animfolio-nav__item"><a href="#experience" class="animfolio-nav__link">Experience</a></li>
+      <li class="animfolio-nav__item"><a href="#skills" class="animfolio-nav__link">Skills</a></li>
+      <li class="animfolio-nav__item"><a href="#projects" class="animfolio-nav__link">Projects</a></li>
+      <li class="animfolio-nav__item"><a href="#contact" class="animfolio-nav__link">Contact</a></li>
+    </ul>
+    <button class="animfolio-theme-toggle" aria-label="Toggle dark mode"><span class="animfolio-theme-toggle__icon animfolio-theme-toggle__icon--sun" aria-hidden="true">☼</span><span class="animfolio-theme-toggle__icon animfolio-theme-toggle__icon--moon" aria-hidden="true">☾</span></button>
+  </nav>
 
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="Adrian Jaspio home"><span class="brand-symbol">A<span>J</span></span><span class="brand-name">ADRIAN JASPIO<small>SOFTWARE DEVELOPER</small></span></a>
-    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="primary-navigation" aria-expanded="false"><span></span><span></span></button>
-    <nav class="main-nav" id="primary-navigation" aria-label="Main navigation">
-      <a href="#work">Work</a><a href="#experience">Experience</a><a href="#approach">Approach</a><a href="#about">About</a>
-      <a class="nav-cta" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
-    </nav>
-  </header>
-
-  <main id="main-content" tabindex="-1">
-    <div id="top" class="page-top" aria-hidden="true"></div>
-    <section class="hero page-grid">
-      <div class="hero-index"><span class="mono">Portfolio · 2026</span><span class="index-line" aria-hidden="true"></span><span class="mono">Software development</span></div>
-      <div class="hero-main">
-        <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Software developer · Philippines</p>
-        <h1>I make<br>complex work<br><em>work better.</em></h1>
-        <div class="hero-bottom">
-          <p class="hero-summary">I build practical software for real-world problems — from business applications and system integrations to products of my own.</p>
-          <div class="hero-links"><a class="button button-dark" href="#work">Explore selected work <span aria-hidden="true">↘</span></a><a class="underlined-link" href="assets/doc/ADRIAN%20JASPIO.pdf" target="_blank" rel="noopener">View résumé ↗</a></div>
-        </div>
-      </div>
-      <div class="hero-aside">
-        <div class="hero-stamp"><span>AJ</span><small>INDEPENDENT<br>THINKING.<br>PRACTICAL<br>ENGINEERING.</small></div>
-        <div class="hero-aside-note"><span class="mono">A note on my work</span><p>Good software starts with understanding the people and processes behind it.</p></div>
-      </div>
-      <div class="hero-footer mono"><span>Based in the Philippines</span><span>Scroll to explore ↓</span><span>C# / .NET / SQL / web</span></div>
-    </section>
-
-    <section class="manifesto page-grid">
-      <div class="section-marker"><span class="mono">POINT OF VIEW</span><span class="marker-rule" aria-hidden="true"></span></div>
-      <div class="manifesto-title"><p class="overline">The way I see software</p><h2>Technology should make the difficult feel <em>manageable.</em></h2></div>
-      <div class="manifesto-copy"><p>I’m interested in the space between a business problem and a useful technical solution. That means asking better questions, understanding the workflow, and choosing an approach that can hold up beyond the first release.</p><p>Not complexity for its own sake. Not features just to fill a screen. Software that earns its place.</p></div>
-    </section>
-
-    <section id="work" class="work-section page-grid">
-      <div class="section-marker"><span class="mono">SELECTED WORK</span><span class="marker-rule"></span></div>
-      <div class="section-intro"><div><p class="overline">A few things I've been building</p><h2>Work with<br><em>a reason.</em></h2></div><p class="section-intro-note">Personal products and developer tools, alongside experience delivering business systems.</p></div>
-
-      <article class="project project-pera">
-        <div class="project-number mono">Personal product</div>
-        <div class="project-visual pera-visual" aria-hidden="true">
-          <div class="pera-paper">
-            <div class="pera-top"><span class="pera-logo">P.</span><span class="mono">Personal finance / overview</span><span class="mono">•••</span></div>
-            <div class="pera-content"><p class="mono">A clearer view of your money</p><div class="pera-headline">Know where<br>you stand<span>.</span></div><div class="pera-bottom"><span>Transactions</span><span>Cash flow</span><span>Recurring items</span></div></div>
-            <div class="pera-sideword mono">PeraFlow — built for everyday clarity</div>
+  <main id="main-content">
+    <section id="hero" class="animfolio-section animfolio-section--hero animfolio-section--align-center" data-animfolio-section="hero">
+      <div class="animfolio-inner">
+        <div class="animfolio-hero">
+          <div class="animfolio-hero__content">
+            <p class="animfolio-eyebrow"><span class="animfolio-eyebrow__dot"></span> Based in the Philippines · Open to opportunities</p>
+            <h1 class="animfolio-hero__name" data-animfolio-animate="fade-up">Adrian Jaspio</h1>
+            <h2 class="animfolio-hero__title" data-animfolio-animate="fade-up" data-animfolio-delay="0.1">Software Developer <span class="animfolio-hero__title-separator">/</span> Programmer Analyst</h2>
+            <div class="animfolio-hero__subtitle animfolio-hero__typed" data-animfolio-typed="[&quot;I build practical software for real-world workflows.&quot;,&quot;I work across business systems and independent products.&quot;,&quot;I turn complex requirements into useful applications.&quot;]" data-animfolio-animate="fade-up" data-animfolio-delay="0.2">I build practical software for real-world workflows.</div>
+            <div class="animfolio-hero__cta" data-animfolio-animate="fade-up" data-animfolio-delay="0.3">
+              <a href="#projects" class="animfolio-button animfolio-button--primary animfolio-hero__cta-primary">Explore My Work</a>
+              <a href="assets/doc/ADRIAN%20JASPIO.pdf" target="_blank" rel="noopener" class="animfolio-button animfolio-button--secondary animfolio-hero__cta-secondary">View Résumé</a>
+            </div>
+            <div class="animfolio-hero__social animfolio-social-icons animfolio-social-icons--outline" data-animfolio-animate="fade-up" data-animfolio-delay="0.4">
+              <a href="https://github.com/adrian1612" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><span class="animfolio-social__label">GitHub ↗</span></a>
+              <a href="https://www.linkedin.com/in/adrian-jaspio-a61923188/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><span class="animfolio-social__label">LinkedIn ↗</span></a>
+              <a href="mailto:adrianjaspio@gmail.com" aria-label="Email"><span class="animfolio-social__label">Email ↗</span></a>
+            </div>
           </div>
-          <span class="visual-index mono">PF / 001</span>
         </div>
-        <div class="project-details">
-          <div class="project-heading"><div><p class="overline">Personal finance application</p><h3>PeraFlow</h3></div><span class="project-arrow" aria-hidden="true">↗</span></div>
-          <p class="project-description">A personal finance application designed to help people track transactions, understand cash flow, and stay on top of recurring financial responsibilities. Built around clarity and practical day-to-day use.</p>
-          <div class="project-bottom"><div class="stack"><span>C#</span><span>.NET MAUI</span><span>SQLite</span><span>API INTEGRATION</span></div><a href="https://github.com/adrian1612/PeraFlow" target="_blank" rel="noopener">View repository ↗</a></div>
-        </div>
-      </article>
+      </div>
+    </section>
 
-      <article class="project project-ian">
-        <div class="project-number mono">In development</div>
-        <div class="project-visual ian-visual" aria-hidden="true">
-          <div class="ian-sheet">
-            <div class="ian-top"><span class="mono">IAN STUDIO</span><span class="mono">Workspace / investigation</span><span>×</span></div>
-            <div class="ian-workspace"><div class="ian-rail"><b>⌘</b><b>⌕</b><b>▤</b><b>⚙</b></div><div class="ian-code"><p class="mono">Project context</p><h4>Understand<br>before changing.</h4><div class="code-row"><i></i><i></i><i></i></div><div class="code-row short"><i></i><i></i></div><div class="code-row"><i></i><i></i><i></i><i></i></div><div class="context-note"><span>✳</span><div><b>Reviewable changes</b><small>Keep the developer in control.</small></div></div></div></div>
+    <section id="about" class="animfolio-section animfolio-section--about animfolio-section--align-center" data-animfolio-section="about">
+      <div class="animfolio-inner">
+        <div class="animfolio-section__header"><h2 class="animfolio-section__title">About Me</h2><p class="animfolio-section__subtitle">I care about the problem behind the request as much as the code used to solve it.</p></div>
+        <div class="animfolio-about" data-animfolio-animate="fade-up">
+          <div class="animfolio-about__bio">I'm a software developer with experience building and supporting business applications, working with databases and integrations, and moving between hands-on engineering and operational responsibilities. I enjoy understanding how a workflow actually works, finding where software can make it better, and delivering changes that remain maintainable.</div>
+          <div class="animfolio-about__fun-facts animfolio-stagger" data-animfolio-stagger="0.1">
+            <div class="animfolio-about__fun-fact animfolio-stagger__item">I have worked across the full application lifecycle — from requirements to support.</div>
+            <div class="animfolio-about__fun-fact animfolio-stagger__item">My experience spans enterprise business systems and independent software products.</div>
+            <div class="animfolio-about__fun-fact animfolio-stagger__item">I value reviewable changes, clear ownership, and practical engineering decisions.</div>
           </div>
-          <span class="visual-index mono">IAN / 002</span>
         </div>
-        <div class="project-details">
-          <div class="project-heading"><div><p class="overline">Developer productivity tool</p><h3>IAN Studio</h3></div><span class="project-arrow">↗</span></div>
-          <p class="project-description">An experiment in making software development more deliberate: inspect a codebase, surface useful context, and support AI-assisted changes through a reviewable workflow. Actively evolving, with an emphasis on transparency and developer control.</p>
-          <div class="project-bottom"><div class="stack"><span>C#</span><span>WPF</span><span>.NET 10</span><span>ROSLYN</span><span>xUNIT</span></div><a href="https://github.com/adrian1612/IntelligentApplicationNexus" target="_blank" rel="noopener">View repository ↗</a></div>
-        </div>
-      </article>
-
-      <div class="other-work"><span class="mono">Also in the work</span><p>Enterprise business applications across project management, HR, accounting, attendance, purchasing, and asset workflows. Some work is internal or proprietary, so details are intentionally kept high-level.</p><div class="other-work-list"><span>Project & operations management</span><span>HR, accounting & attendance</span><span>SQL Server Backup Utility · AJDBLib</span></div></div>
-    </section>
-
-    <section id="experience" class="experience-section page-grid">
-      <div class="section-marker"><span class="mono">EXPERIENCE</span><span class="marker-rule"></span></div>
-      <div class="section-intro"><div><p class="overline">Learning through delivery</p><h2>Built in<br><em>the field.</em></h2></div><p class="section-intro-note">A career shaped by hands-on development, growing responsibility, and a close understanding of how organizations work.</p></div>
-      <div class="career-list">
-        <article class="career-item"><span class="career-date mono">APR 2025 — PRESENT</span><div class="career-role"><h3>Programmer / Analyst S3</h3><p class="career-company">Vertere Global Solutions</p><p>Working on complex software systems, translating business needs into technical solutions, and contributing to scalable, secure, maintainable applications.</p></div><span class="career-count mono">01</span></article>
-        <article class="career-item"><span class="career-date mono">APR 2021 — MAR 2025</span><div class="career-role"><h3>Full-stack Programmer → Senior Programmer → MIS Supervisor</h3><p class="career-company">Mayo Holdings and Construction, Inc.</p><p>Progressed from application development into senior engineering and MIS supervision, spanning system delivery, database work, technical direction, and team coordination.</p></div><span class="career-count mono">02</span></article>
-        <article class="career-item"><span class="career-date mono">2020 — 2021</span><div class="career-role"><h3>Application Programmer</h3><p class="career-company">Royal Star Appliance Marketing Inc.</p><p>Developed and maintained business applications, updated existing programs, debugged issues, and supported database operations.</p></div><span class="career-count mono">03</span></article>
       </div>
     </section>
 
-    <section id="approach" class="approach-section page-grid">
-      <div class="section-marker"><span class="mono">HOW I WORK</span><span class="marker-rule"></span></div>
-      <div class="section-intro"><div><p class="overline">Tools are only part of it</p><h2>Think clearly.<br><em>Build carefully.</em></h2></div><p class="section-intro-note">My toolkit is grounded in the Microsoft ecosystem and practical application development.</p></div>
-      <div class="approach-grid">
-        <article><h3>Backend & APIs</h3><p>Application logic, service design, integration, and authentication.</p><div class="stack"><span>C#</span><span>.NET</span><span>ASP.NET CORE</span><span>REST</span><span>JWT</span></div></article>
-        <article><h3>Interfaces</h3><p>Interfaces for web, desktop, and cross-platform applications.</p><div class="stack"><span>JAVASCRIPT</span><span>HTML / CSS</span><span>BLAZOR</span><span>WPF</span><span>.NET MAUI</span></div></article>
-        <article><h3>Data & persistence</h3><p>Relational data, query design, and application persistence.</p><div class="stack"><span>SQL SERVER</span><span>SQLITE</span><span>STORED PROCEDURES</span><span>DATABASE DESIGN</span></div></article>
-        <article><h3>Engineering practice</h3><p>Building confidence through feedback, testing, and maintainable change.</p><div class="stack"><span>GIT</span><span>VISUAL STUDIO</span><span>xUNIT</span><span>ROSLYN</span><span>DEBUGGING</span></div></article>
+    <section id="experience" class="animfolio-section animfolio-section--experience animfolio-section--align-center" data-animfolio-section="experience">
+      <div class="animfolio-inner">
+        <div class="animfolio-section__header"><h2 class="animfolio-section__title">Experience</h2><p class="animfolio-section__subtitle">A progression through application development, senior engineering, and information systems leadership.</p></div>
+        <div class="animfolio-timeline animfolio-stagger" data-animfolio-animate="fade-up" data-animfolio-stagger="0.1">
+          <div class="animfolio-timeline__line"></div>
+          <div class="animfolio-timeline__item animfolio-stagger__item"><div class="animfolio-timeline__dot"></div><div class="animfolio-timeline__content animfolio-card animfolio-card--bordered">
+            <div class="animfolio-timeline__role">Programmer / Analyst S3</div><div class="animfolio-timeline__company">Vertere Global Solutions</div><div class="animfolio-timeline__date">Apr 2025 — Present</div>
+            <div class="animfolio-timeline__description">Contributing to the development and support of business software, translating operational requirements into application changes, and working across application logic, data, and system workflows.</div>
+            <div class="animfolio-timeline__tags animfolio-card__tags"><span class="animfolio-card__tag">C# / .NET</span><span class="animfolio-card__tag">SQL</span><span class="animfolio-card__tag">Business Systems</span></div>
+          </div></div>
+          <div class="animfolio-timeline__item animfolio-stagger__item"><div class="animfolio-timeline__dot"></div><div class="animfolio-timeline__content animfolio-card animfolio-card--bordered">
+            <div class="animfolio-timeline__role">Full-stack Programmer → Senior Programmer → MIS Supervisor</div><div class="animfolio-timeline__company">Mayo Holdings and Construction, Inc.</div><div class="animfolio-timeline__date">Apr 2021 — Mar 2025</div>
+            <div class="animfolio-timeline__description">Progressed from full-stack development into senior programming and MIS supervision. Worked on internal systems supporting project management, HR, accounting, attendance, purchasing, and operational workflows, alongside database and team responsibilities.</div>
+            <div class="animfolio-timeline__tags animfolio-card__tags"><span class="animfolio-card__tag">Full-stack Development</span><span class="animfolio-card__tag">SQL Server</span><span class="animfolio-card__tag">System Integration</span><span class="animfolio-card__tag">MIS</span></div>
+          </div></div>
+          <div class="animfolio-timeline__item animfolio-stagger__item"><div class="animfolio-timeline__dot"></div><div class="animfolio-timeline__content animfolio-card animfolio-card--bordered">
+            <div class="animfolio-timeline__role">Application Programmer</div><div class="animfolio-timeline__company">Royal Star Appliance Marketing Inc.</div><div class="animfolio-timeline__date">2020 — 2021</div>
+            <div class="animfolio-timeline__description">Developed and maintained business applications, addressed application issues, and supported ongoing system and database operations.</div>
+            <div class="animfolio-timeline__tags animfolio-card__tags"><span class="animfolio-card__tag">Application Development</span><span class="animfolio-card__tag">Database</span></div>
+          </div></div>
+        </div>
       </div>
     </section>
 
-    <section id="about" class="about-section page-grid">
-      <div class="section-marker"><span class="mono">ABOUT</span><span class="marker-rule"></span></div>
-      <div class="about-layout"><div class="about-image"><img src="assets/img/profile.jpg" alt="Portrait of Adrian Jaspio" loading="lazy"><span class="mono">Adrian A. Jaspio / developer</span></div><div class="about-copy"><p class="overline">Behind the work</p><h2>Curious by nature.<br><em>Practical by design.</em></h2><p>I’m a software developer who enjoys understanding how things work — from the business process behind a request to the technical details that make a solution reliable.</p><p>My experience spans enterprise systems, application development, and personal product experiments. I value clear communication, thoughtful problem-solving, and code that the next developer can understand.</p><div class="about-facts"><div><b>2017</b><span>BS Information Systems</span></div><div><b>Always</b><span>Learning & building</span></div></div><a class="underlined-link" href="assets/doc/ADRIAN%20JASPIO.pdf" target="_blank" rel="noopener">Download résumé ↗</a></div></div>
+    <section id="skills" class="animfolio-section animfolio-section--skills animfolio-section--align-center" data-animfolio-section="skills">
+      <div class="animfolio-inner">
+        <div class="animfolio-section__header"><h2 class="animfolio-section__title">Technical Skills</h2><p class="animfolio-section__subtitle">Technologies and practices I have used across professional work and personal projects.</p></div>
+        <div class="animfolio-grid animfolio-grid--2 animfolio-stagger" data-animfolio-stagger="0.1">
+          <div class="animfolio-skills__category animfolio-card animfolio-card--bordered animfolio-stagger__item"><h3 class="animfolio-skills__category-title">Backend & APIs</h3><div class="animfolio-card__tags"><span class="animfolio-card__tag">C#</span><span class="animfolio-card__tag">.NET</span><span class="animfolio-card__tag">ASP.NET Core</span><span class="animfolio-card__tag">REST APIs</span><span class="animfolio-card__tag">JWT</span></div></div>
+          <div class="animfolio-skills__category animfolio-card animfolio-card--bordered animfolio-stagger__item"><h3 class="animfolio-skills__category-title">Desktop & Frontend</h3><div class="animfolio-card__tags"><span class="animfolio-card__tag">WPF</span><span class="animfolio-card__tag">.NET MAUI</span><span class="animfolio-card__tag">Blazor</span><span class="animfolio-card__tag">JavaScript</span><span class="animfolio-card__tag">HTML / CSS</span></div></div>
+          <div class="animfolio-skills__category animfolio-card animfolio-card--bordered animfolio-stagger__item"><h3 class="animfolio-skills__category-title">Data & Persistence</h3><div class="animfolio-card__tags"><span class="animfolio-card__tag">SQL Server</span><span class="animfolio-card__tag">SQLite</span><span class="animfolio-card__tag">Stored Procedures</span><span class="animfolio-card__tag">Database Design</span></div></div>
+          <div class="animfolio-skills__category animfolio-card animfolio-card--bordered animfolio-stagger__item"><h3 class="animfolio-skills__category-title">Engineering Practice</h3><div class="animfolio-card__tags"><span class="animfolio-card__tag">Git</span><span class="animfolio-card__tag">Visual Studio</span><span class="animfolio-card__tag">xUnit</span><span class="animfolio-card__tag">Roslyn</span><span class="animfolio-card__tag">Debugging</span><span class="animfolio-card__tag">Code Review</span></div></div>
+        </div>
+      </div>
     </section>
 
-    <section id="contact" class="contact-section page-grid">
-      <div class="section-marker"><span class="mono">CONTACT</span><span class="marker-rule"></span></div>
-      <div class="contact-layout"><p class="overline">Have a project or opportunity?</p><h2>Let's make<br><em>something useful.</em></h2><div class="contact-bottom"><p>Open to software engineering opportunities, collaboration, and thoughtful conversations about building better systems.</p><div class="contact-links"><a class="button button-dark" href="mailto:adrianjaspio@gmail.com">Get in touch <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/adrian-jaspio-a61923188/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://github.com/adrian1612" target="_blank" rel="noopener">GitHub ↗</a></div></div><a class="contact-email" href="mailto:adrianjaspio@gmail.com">adrianjaspio@gmail.com</a></div>
+    <section id="projects" class="animfolio-section animfolio-section--projects animfolio-section--align-center" data-animfolio-section="projects">
+      <div class="animfolio-inner">
+        <div class="animfolio-section__header"><h2 class="animfolio-section__title">Selected Projects</h2><p class="animfolio-section__subtitle">Independent products and tools that show how I approach real problems, architecture, and developer experience.</p></div>
+        <div class="animfolio-grid animfolio-grid--2 animfolio-stagger" data-animfolio-stagger="0.15">
+          <article class="animfolio-project animfolio-card animfolio-card--bordered animfolio-f01-codecard animfolio-stagger__item">
+            <div class="animfolio-f01-codecard__bar" aria-hidden="true"><span class="animfolio-f01-codecard__dots"><span class="animfolio-f01-codecard__dot"></span><span class="animfolio-f01-codecard__dot"></span><span class="animfolio-f01-codecard__dot"></span></span><span class="animfolio-f01-codecard__file">PeraFlow / finance-tracker</span></div>
+            <div class="aj-code-preview" aria-hidden="true"><span><strong>01</strong>  Track transactions and cash flow</span><span><strong>02</strong>  Manage recurring financial reminders</span><span><strong>03</strong>  Keep investment activity separate</span><span class="dim">Built for practical everyday money management.</span></div>
+            <div class="animfolio-f01-codecard__body"><h3 class="animfolio-project__title animfolio-card__title">PeraFlow</h3><p class="animfolio-project__description">A personal finance application focused on clear transaction tracking, cash flow visibility, recurring reminders, and investment activity. Built as a practical product with careful attention to how financial data is represented.</p><div class="animfolio-project__stack animfolio-card__tags"><span class="animfolio-card__tag">C#</span><span class="animfolio-card__tag">.NET MAUI</span><span class="animfolio-card__tag">SQLite</span><span class="animfolio-card__tag">API Integration</span></div><div class="animfolio-project__links animfolio-card__footer"><a href="https://github.com/adrian1612/PeraFlow" target="_blank" rel="noopener noreferrer" class="animfolio-button animfolio-button--primary">View Source ↗</a></div></div>
+          </article>
+          <article class="animfolio-project animfolio-card animfolio-card--bordered animfolio-f01-codecard animfolio-stagger__item">
+            <div class="animfolio-f01-codecard__bar" aria-hidden="true"><span class="animfolio-f01-codecard__dots"><span class="animfolio-f01-codecard__dot"></span><span class="animfolio-f01-codecard__dot"></span><span class="animfolio-f01-codecard__dot"></span></span><span class="animfolio-f01-codecard__file">IAN Studio / code-investigation</span></div>
+            <div class="aj-code-preview" aria-hidden="true"><span><strong>01</strong>  Inspect a solution and its projects</span><span><strong>02</strong>  Gather relevant code context</span><span><strong>03</strong>  Review proposed multi-file changes</span><span class="dim">Keep the developer in control of every change.</span></div>
+            <div class="animfolio-f01-codecard__body"><h3 class="animfolio-project__title animfolio-card__title">IAN Studio</h3><p class="animfolio-project__description">A WPF developer tool exploring context-aware code investigation and AI-assisted changes. The workflow is designed around inspecting a project, understanding relevant code, and reviewing changes before applying them.</p><div class="animfolio-project__stack animfolio-card__tags"><span class="animfolio-card__tag">C#</span><span class="animfolio-card__tag">WPF</span><span class="animfolio-card__tag">.NET 10</span><span class="animfolio-card__tag">Roslyn</span><span class="animfolio-card__tag">xUnit</span></div><div class="animfolio-project__links animfolio-card__footer"><a href="https://github.com/adrian1612/IntelligentApplicationNexus" target="_blank" rel="noopener noreferrer" class="animfolio-button animfolio-button--primary">View Source ↗</a><span class="animfolio-card__meta">In active development</span></div></div>
+          </article>
+        </div>
+        <div class="animfolio-card animfolio-card--bordered" style="margin-top:24px;padding:22px 24px"><h3 class="animfolio-card__title">Enterprise business systems</h3><p class="animfolio-project__description">Professional experience includes internal applications across project management, HR, accounting, attendance, purchasing, and operational workflows. Some systems are proprietary, so implementation details and source code are not published.</p></div>
+      </div>
+    </section>
+
+    <section id="contact" class="animfolio-section animfolio-section--contact animfolio-section--align-center" data-animfolio-section="contact">
+      <div class="animfolio-inner">
+        <div class="animfolio-section__header"><h2 class="animfolio-section__title">Get in Touch</h2></div>
+        <div class="animfolio-contact" data-animfolio-animate="fade-up">
+          <p class="animfolio-contact__heading">Let's build something useful.</p>
+          <p class="animfolio-contact__description">I'm open to software engineering opportunities, collaboration, and conversations about building better systems. If my experience looks relevant, I'd be glad to connect.</p>
+          <div class="aj-contact-links">
+            <a href="mailto:adrianjaspio@gmail.com" class="animfolio-button animfolio-button--primary">Email Adrian ↗</a>
+            <a href="https://www.linkedin.com/in/adrian-jaspio-a61923188/" target="_blank" rel="noopener noreferrer" class="animfolio-button animfolio-button--secondary">LinkedIn ↗</a>
+            <a href="https://github.com/adrian1612" target="_blank" rel="noopener noreferrer" class="animfolio-button animfolio-button--secondary">GitHub ↗</a>
+            <a href="assets/doc/ADRIAN%20JASPIO.pdf" target="_blank" rel="noopener" class="animfolio-button animfolio-button--secondary">Résumé PDF ↗</a>
+          </div>
+          <p class="animfolio-contact__description" style="margin-top:28px"><a href="mailto:adrianjaspio@gmail.com">adrianjaspio@gmail.com</a> · Philippines</p>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="site-footer"><a class="brand" href="#top"><span class="brand-symbol">A<span>J</span></span><span class="brand-name">ADRIAN JASPIO<small>SOFTWARE DEVELOPER</small></span></a><span class="mono">© <span id="year"></span> ADRIAN JASPIO</span><a class="mono" href="#top">Back to top ↑</a></footer>
-  <script src="assets/js/portfolio.js"></script>
-
+  <button class="animfolio-back-to-top" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 15V5M10 5L5 10M10 5L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
+  <div class="animfolio-progress"><div class="animfolio-progress__bar"></div></div>
+  <footer class="aj-footer"><div class="aj-footer-inner"><span>© <span id="current-year">2026</span> Adrian Jaspio</span><span>Built on AnimFolio Developer Classic · GPL-2.0-or-later</span><a href="#hero">Back to top ↑</a></div></footer>
+</div>
+<script>
+var animfolioSettings = {"animationIntensity":"medium","respectReducedMotion":"1","colorScheme":"dark","smoothScroll":"1","scrollBehavior":"smooth","customCursor":"","backToTop":"1","progressBar":"1","darkModeToggle":"1","debugMode":""};
+document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+<script src="https://cdn.jsdelivr.net/gh/rahulmahadik/animfolio-html@f40050594decfa544edbc0a43cab79e7fe212dc1/format-01-developer/assets/js/wp-shim.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/rahulmahadik/animfolio-html@f40050594decfa544edbc0a43cab79e7fe212dc1/format-01-developer/assets/js/animfolio-engine.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/rahulmahadik/animfolio-html@f40050594decfa544edbc0a43cab79e7fe212dc1/format-01-developer/assets/js/modules/scroll-trigger.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/rahulmahadik/animfolio-html@f40050594decfa544edbc0a43cab79e7fe212dc1/format-01-developer/assets/js/modules/typed-text.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/rahulmahadik/animfolio-html@f40050594decfa544edbc0a43cab79e7fe212dc1/format-01-developer/assets/js/modules/counter.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/rahulmahadik/animfolio-html@f40050594decfa544edbc0a43cab79e7fe212dc1/format-01-developer/assets/js/modules/timeline-draw.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/rahulmahadik/animfolio-html@f40050594decfa544edbc0a43cab79e7fe212dc1/format-01-developer/assets/js/modules/stagger.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/rahulmahadik/animfolio-html@f40050594decfa544edbc0a43cab79e7fe212dc1/format-01-developer/assets/js/modules/parallax.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/rahulmahadik/animfolio-html@f40050594decfa544edbc0a43cab79e7fe212dc1/format-01-developer/assets/js/modules/progress-bar.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/rahulmahadik/animfolio-html@f40050594decfa544edbc0a43cab79e7fe212dc1/format-01-developer/assets/js/modules/smooth-scroll.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/rahulmahadik/animfolio-html@f40050594decfa544edbc0a43cab79e7fe212dc1/format-01-developer/assets/js/modules/theme-toggle.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/rahulmahadik/animfolio-html@f40050594decfa544edbc0a43cab79e7fe212dc1/format-01-developer/assets/js/format.js"></script>
 </body>
 </html>
